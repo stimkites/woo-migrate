@@ -1,0 +1,73 @@
+/* Admin styles */
+
+.migrate-rel {
+  display: none;
+}
+
+.wtwm-warn{
+  padding: 10px 0 20px 50px;
+  display: block;
+
+  &::before {
+    color: #b4477c;
+    content: "\f488";
+    font: 400 20px/1 dashicons;
+    margin:0 10px 0 -25px;
+    position: absolute;
+  }
+}
+
+#wtwm-check-connection[disabled]::after{
+  color: #2cb437;
+  content: "\f147";
+  font: 400 28px/1 dashicons;
+  position: absolute;
+  margin: 0 12px;
+}
+
+#progress {
+  font-size: 12px;
+  line-height: 2em;
+  height: 30px;
+  width: 400px;
+  background: #fff;
+  text-align: center;
+  margin: 0 0 10px 0;
+  border: 1px solid #888;
+  border-radius: 4px;
+  position: relative;
+  display: none;
+
+  label {
+    z-index: 1;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    line-height: 28px;
+  }
+
+  span {
+    width: 1%;
+    height: 30px;
+    background: #ccc;
+    position: absolute;
+    left: 0;
+    border-radius: 4px;
+    transition: width .3s ease-in-out;
+    z-index: 0;
+  }
+}
+
+#verify-data {
+  border-left: 4px solid limegreen;
+  padding: 20px 30px;
+  margin: 40px 0;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0,0,0,.04);
+  display: none;
+  h4 {
+    margin: 0 0 20px;
+    padding: 0;
+  }
+}
