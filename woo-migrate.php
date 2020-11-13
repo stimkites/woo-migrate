@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name: WooCommerce Site-to-Site Migration
- * Plugin URI: https://wetail.io
- * Description: Simple way to migrate your Woo data from one WP instance into another.
- * Version: 0.0.1
- * Author: Wetail AB
- * Author URI: https://wetail.io
+ * Plugin Name: Woo Migrate
+ * Plugin URI: https://nexus.ooo
+ * Description: Simple way to migrate your WooCommerce data - orders, products, customers, taxonomies and many more - from one WP instance into another.
+ * Version: 0.0.2
+ * Author: Nexus OOO
+ * Author URI: https://nexus.ooo
  * License: GPL3
  *
  * @Note: SASS/SCSS/JS is built using phpStorm file watchers
  *
- * @Note: Do not forget to update the version below!
+ * @Note: Do not forget to update the version below as it is involved during migration process!
  */
 
 namespace Wetail\Woo\Migration;
@@ -18,7 +18,7 @@ namespace Wetail\Woo\Migration;
 /**
  * Plugin version for verifications
  */
-const VERSION = '0.0.1';
+const VERSION = '0.0.2';
 
 /**
  * Plugin constants
@@ -37,11 +37,6 @@ define( __NAMESPACE__ . '\ID',    plugin_basename( __FILE__ )                   
 const DEPS = [ 'WooCommerce' ];
 
 /**
- * Initialize autoloader
+ * Initialize PSR-4 compressed autoloader
  */
-require_once "autoload.php";
-
-/**
- * Load plugin
- */
-Migrate::load();
+require_once "loader.php";
